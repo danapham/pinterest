@@ -1,0 +1,12 @@
+{
+  "firebaseKeys": {
+  apiKey: "AIzaSyB4_O5r5hghMgj6VimPX5puoHettP3CdTg",
+  authDomain: "pinterest-77df5.firebaseapp.com",
+  databaseURL: "https://pinterest-77df5.firebaseio.com",
+  projectId: "pinterest-77df5",
+  storageBucket: "pinterest-77df5.appspot.com",
+  messagingSenderId: "1082265994791",
+  appId: "1:1082265994791:web:10be75f92fccc7e654f002",
+  measurementId: "G-J4X81FKB36"
+  }
+}
