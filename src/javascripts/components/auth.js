@@ -10,10 +10,10 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // display pins
-      console.log('logged in');
+      // console.log('logged in');
       // logoutButton();
     } else {
-      console.log('logged out');
+      // console.log('logged out');
       $('ul').remove('.user-view');
       // loginButton();
     }
