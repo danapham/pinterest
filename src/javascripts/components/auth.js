@@ -11,11 +11,11 @@ const checkLoginStatus = () => {
     if (user) {
       // display pins
       console.log('logged in');
-      logoutButton();
+      // logoutButton();
     } else {
       console.log('logged out');
       $('ul').remove('.user-view');
-      loginButton();
+      // loginButton();
     }
   });
 };
@@ -30,12 +30,12 @@ const loginButton = () => {
   checkLoginStatus();
 };
 
-const logoutButton = () => {
-  $('#authBtn').replaceWith('<button class="btn btn-outline-secondary ml-auto" id="logoutBtn" type="button">Logout</button>');
-  $('#logoutBtn').on('click', () => {
-    firebase.auth().signOut();
-    checkLoginStatus();
-  });
-};
+// const logoutButton = () => {
+//   $('#authBtn').replaceWith('<button class="btn btn-outline-secondary ml-auto" id="logoutBtn" type="button">Logout</button>');
+//   $('#logoutBtn').on('click', () => {
+//     firebase.auth().signOut();
+//     checkLoginStatus();
+//   });
+// };
 
 export default { loginButton };
