@@ -20,6 +20,8 @@ const checkLoginStatus = () => {
     if (user) {
       // setLoginStatus(true);
       // display pins
+      $('ul').remove('.user-view');
+
       console.warn('logged in');
       // logoutButton();
     } else {
