@@ -1,4 +1,4 @@
-import boards from '../components/boards';
+import boards from '../components/views/boards';
 
 const viewHelper = (id) => {
   $('#app').html('');

@@ -5,7 +5,14 @@ const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getAllBoards = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/boards.json`).then((response) => {
-    console.warn(response.data);
+    const boardObjects = response.data;
+    const boards = [];
+    if (boardObjects) {
+      Object.keys(boardObjects).forEach((boardKey) => {
+        boards.push(boardObjects[boardKey]);
+      });
+    }
+    resolve(boards);
   }).catch((error) => reject(error));
 });
 

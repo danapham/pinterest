@@ -5,7 +5,7 @@ import 'firebase/auth';
 import navbar from '../../components/navbar';
 import loginButton from '../../components/auth';
 import homeView from '../../components/home';
-import boardView from '../../components/boards';
+import boardView from '../../components/views/boards';
 import viewHelpers from '../viewHelpers';
 
 // export default { checkLoginStatus };
