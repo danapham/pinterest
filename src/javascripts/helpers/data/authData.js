@@ -6,6 +6,7 @@ import navbar from '../../components/navbar';
 import loginButton from '../../components/auth';
 import homeView from '../../components/home';
 import boardView from '../../components/boards';
+import viewHelpers from '../viewHelpers';
 
 // export default { checkLoginStatus };
 const checkLoginStatus = () => {
@@ -13,6 +14,7 @@ const checkLoginStatus = () => {
     if (user) {
       navbar.displayUserNav();
       boardView.boardView();
+      viewHelpers.viewListeners();
       console.warn('logged in');
     } else {
       loginButton.loginButton();

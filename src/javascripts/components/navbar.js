@@ -17,10 +17,10 @@ const displayUserNav = () => {
     <a class="navbar-brand" href="#">Savorites</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav user-view">
-        <li class="nav-item active">
+        <li class="nav-item active" id="boardsLink">
           <a class="nav-link" href="#">Boards <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="pinsLink">
           <a class="nav-link" href="#">Pins</a>
         </li>
       </ul>
