@@ -7,58 +7,23 @@ const signMeIn = () => {
   firebase.auth().signInWithPopup(provider);
 };
 
-const signMeOut = () => {
-  firebase.auth().signOut();
-};
-
 // const setLoginStatus = (status) => {
 //   sessionStorage.setItem('loginStatus', status);
 // };
 
-const checkLoginStatus = () => {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      // setLoginStatus(true);
-      // display pins
-      $('ul').remove('.user-view');
-
-      console.warn('logged in');
-      // logoutButton();
-    } else {
-      console.warn('logged out');
-      $('ul').remove('.user-view');
-      // loginButton();
-    }
-  });
-};
-
-const logoutButton = () => {
-  $('#authBtn').replaceWith(
-    '<button class="btn btn-outline-secondary ml-auto" id="logoutBtn" type="button">Logout</button>'
-  );
-  $('#logoutBtn').on('click', () => {
-    signMeOut();
-    setLoginStatus(false);
-  });
-};
-
 const loginButton = () => {
-  if ($('#logoutBtn').length > 0) {
-    $('#logoutBtn').replaceWith(
-      '<button class="btn btn-outline-secondary ml-auto" id="authBtn" type="button">Login</button>'
-    );
-    $('#authBtn').on('click', signMeIn);
-  } else {
-    $('#authBtn').on('click', () => {
-      signMeIn();
-      setLoginStatus();
-      $('#authBtn').replaceWith(
-        '<button class="btn btn-outline-secondary ml-auto" id="logoutBtn" type="button">Logout</button>'
-      );
-    });
-    logoutButton();
-  }
-  checkLoginStatus();
+  $('#nav').html(`
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Savorites</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary ml-auto" id="loginBtn" type="button">Login</button>
+        </li>
+      </ul>
+    </div>
+  </nav>`);
+  $('#loginBtn').on('click', signMeIn);
 };
 
 export default { loginButton };
