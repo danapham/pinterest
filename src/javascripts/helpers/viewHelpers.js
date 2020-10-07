@@ -8,6 +8,8 @@ const viewHelper = (id) => {
       return boards.boardView();
     case '123':
       return boardPins.boardPinsView(id);
+    case '44':
+      return boardPins.boardPinsView(id);
     default:
       return console.warn('nothing clicked');
   }
