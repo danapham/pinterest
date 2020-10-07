@@ -5,6 +5,7 @@ const viewHelper = (id) => {
   switch (id) {
     case 'boardsLink':
       return boards.boardView();
+    // case ''
     default:
       return console.warn('nothing clicked');
   }
@@ -15,6 +16,7 @@ const viewListeners = () => {
   $('body').on('click', 'li.nav-item', (e) => {
     viewHelper(e.currentTarget.id);
   });
+  // $('body').on('click', 'div.')
 };
 
 export default { viewListeners };
