@@ -26,6 +26,9 @@ const displayUserNav = () => {
         <li class="nav-item" id="addBoardLink">
         <a class="nav-link" href="#">+Add Board</a>
       </li>
+      <li class="nav-item" id="addPinLink">
+      <a class="nav-link" href="#">+Add Pin</a>
+    </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

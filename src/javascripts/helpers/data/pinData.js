@@ -16,6 +16,13 @@ const getBoardPins = (boardId) => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
+const createPin = (pinData) => axios.post(`${baseUrl}/pins.json`, pinData)
+  .then((response) => {
+    console.warn(pinData);
+    const fbKey = { pinId: response.data.name };
+    axios.patch(`${baseUrl}/pins/${response.data.name}.json`, fbKey);
+  }).catch((error) => console.warn(error));
+
 const deletePin = (pinId) => axios.delete(`${baseUrl}/pins/${pinId}.json`);
 
-export default { getBoardPins, deletePin };
+export default { getBoardPins, deletePin, createPin };
