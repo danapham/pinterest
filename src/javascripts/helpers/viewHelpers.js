@@ -1,8 +1,10 @@
 import boards from '../components/views/boards';
 import boardPins from '../components/views/boardPins';
+import addBoard from '../components/views/addBoard';
 
 const viewHelper = (id) => {
   $('#app').html('');
+
   switch (id) {
     case 'boardsLink':
       return boards.boardView();
@@ -10,6 +12,8 @@ const viewHelper = (id) => {
       return boardPins.boardPinsView(id);
     case '44':
       return boardPins.boardPinsView(id);
+    case 'addBoardLink':
+      return addBoard.addBoard();
     default:
       return console.warn('nothing clicked');
   }

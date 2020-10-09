@@ -16,4 +16,10 @@ const getAllBoards = () => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-export default { getAllBoards };
+const createBoard = (boardData) => axios.post(`${baseUrl}/boards.json`, boardData)
+  .then((response) => {
+    const fbKey = { boardId: response.data.name };
+    axios.patch(`${baseUrl}/boards/${response.data.name}.json`, fbKey);
+  }).catch((error) => console.warn(error));
+
+export default { getAllBoards, createBoard };
