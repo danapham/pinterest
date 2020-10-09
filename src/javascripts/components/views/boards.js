@@ -2,7 +2,7 @@ import boardCards from '../cards/boardCards';
 import boardData from '../../helpers/data/boardData';
 
 const boardView = () => {
-  $('#app').html('<h1>Boards</h1>');
+  $('#app').html('');
 
   boardData.getAllBoards()
     .then((response) => {

@@ -33,7 +33,7 @@ const boardForm = () => {
         $('#successMsg').html('');
       }, 3000);
 
-      $('boardTitle').val('');
+      $('#boardTitle').val('');
     }
   });
 };
