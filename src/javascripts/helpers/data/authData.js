@@ -15,10 +15,8 @@ const checkLoginStatus = () => {
       navbar.displayUserNav();
       boardView.boardView();
       viewHelpers.viewListeners();
-      console.warn('logged in');
     } else {
       loginButton.loginButton();
-      console.warn('logged out');
       homeView.homeView();
     }
   });
