@@ -11,7 +11,6 @@ const pinBuilder = (pinObject) => {
 
   $('body').on('click', 'button.delete-pin', (e) => {
     pinData.deletePin(e.currentTarget.id);
-    console.warn(e.currentTarget.id);
   });
 
   return domString;
