@@ -6,6 +6,7 @@ const boardPinsView = (boardId) => {
 
   pinData.getBoardPins(boardId)
     .then((response) => {
+      console.warn(response);
       if (response.length) {
         response.forEach((pin) => {
           $('#app').append(pinBuilder.pinBuilder(pin));
