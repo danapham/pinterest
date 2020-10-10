@@ -24,7 +24,6 @@ const viewListeners = () => {
   // viewHelper(view);
   $('body').on('click', 'li.nav-item', (e) => {
     viewHelper(e.currentTarget.id);
-    console.warn(e.currentTarget.id);
   });
   $('body').on('click', 'div.board-card', (e) => {
     viewHelper('displayPins', e.currentTarget.id);
