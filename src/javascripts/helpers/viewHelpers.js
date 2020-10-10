@@ -3,16 +3,14 @@ import boardPins from '../components/views/boardPins';
 import addBoard from '../components/views/addBoard';
 import addPin from '../components/views/addPin';
 
-const viewHelper = (id) => {
+const viewHelper = (id, arg) => {
   $('#app').html('');
 
   switch (id) {
     case 'boardsLink':
       return boards.boardView();
-    case '123':
-      return boardPins.boardPinsView(id);
-    case '44':
-      return boardPins.boardPinsView(id);
+    case 'displayPins':
+      return boardPins.boardPinsView(arg);
     case 'addBoardLink':
       return addBoard.addBoard();
     case 'addPinLink':
@@ -29,7 +27,7 @@ const viewListeners = () => {
     console.warn(e.currentTarget.id);
   });
   $('body').on('click', 'div.board-card', (e) => {
-    viewHelper(e.currentTarget.id);
+    viewHelper('displayPins', e.currentTarget.id);
   });
 };
 
