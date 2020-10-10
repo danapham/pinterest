@@ -46,7 +46,7 @@ const pinForm = () => {
 
       pinData.createPin(pinFormData)
         .then(() => {
-          $('#pinSuccessMsg').html('<div class="alert alert-success" role="alert">Your board was added!</div>');
+          $('#pinSuccessMsg').html('<div class="alert alert-success" role="alert">Your pin was added!</div>');
         }).catch((error) => console.warn(error));
 
       setTimeout(() => {
