@@ -23,6 +23,12 @@ const createPin = (pinData) => axios.post(`${baseUrl}/pins.json`, pinData)
     axios.patch(`${baseUrl}/pins/${response.data.name}.json`, fbKey);
   }).catch((error) => console.warn(error));
 
+const getSinglePin = (pinId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/pins/${pinId}.json`).then((response) => {
+    
+  })
+})
+
 // const editPin = (pinId) => {
 
 // }
