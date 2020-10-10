@@ -23,6 +23,10 @@ const createPin = (pinData) => axios.post(`${baseUrl}/pins.json`, pinData)
     axios.patch(`${baseUrl}/pins/${response.data.name}.json`, fbKey);
   }).catch((error) => console.warn(error));
 
+// const editPin = (pinId) => {
+
+// }
+
 const deletePin = (pinId) => axios.delete(`${baseUrl}/pins/${pinId}.json`);
 
 export default { getBoardPins, deletePin, createPin };

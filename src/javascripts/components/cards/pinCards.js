@@ -5,7 +5,7 @@ const pinBuilder = (pinObject) => {
   <img src="${pinObject.imageUrl}" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">${pinObject.caption}</p>
-    <button type="button" class="btn btn-light">Edit</button>
+    <button type="button" class="btn btn-light edit-pin" id="${pinObject.pinId}">Edit</button>
     <button type="button" class="btn btn-light delete-pin" id="${pinObject.pinId}">Delete</button>
   </div>
 </div>`;
