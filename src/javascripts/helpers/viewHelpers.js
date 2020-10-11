@@ -17,7 +17,7 @@ const viewHelper = (id, arg) => {
     case 'addPinLink':
       return addPin.addPin();
     case 'editPin':
-      return editPin.editPinView();
+      return editPin.editPinView(arg);
     default:
       return console.warn('nothing clicked');
   }

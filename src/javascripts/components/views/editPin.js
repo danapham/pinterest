@@ -1,8 +1,8 @@
 import editPinForm from '../forms/editPinForm';
 
-const editPinView = () => {
+const editPinView = (pinId) => {
   $('#app').html('<div id="editPinForm"></div>');
-  editPinForm.editPinForm();
+  editPinForm.editPinForm(pinId);
 };
 
 export default { editPinView };

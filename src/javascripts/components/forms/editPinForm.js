@@ -1,6 +1,7 @@
 import boardData from '../../helpers/data/boardData';
+import pinData from '../../helpers/data/pinData';
 
-const editPinForm = () => {
+const editPinForm = (pinId) => {
   boardData.getAllBoards().then((response) => {
     const boardTitles = [];
     $('#selectedBoardTitle').html('');
@@ -10,6 +11,8 @@ const editPinForm = () => {
       boardTitles.push(board.title);
     });
   }).catch((error) => console.warn(error));
+
+  pinData.getSinglePin(pinId);
 
   $('#editPinForm').html(`
   <div id="pinSuccessMsg"></div>
