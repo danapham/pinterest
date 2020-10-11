@@ -23,6 +23,20 @@ const createPin = (pinData) => axios.post(`${baseUrl}/pins.json`, pinData)
     axios.patch(`${baseUrl}/pins/${response.data.name}.json`, fbKey);
   }).catch((error) => console.warn(error));
 
+const getSinglePin = (pinId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/pins/${pinId}.json`).then((response) => {
+    resolve(response.data);
+  }).catch((error) => reject(error));
+});
+
+const editPin = (pinId, pinObj) => axios.patch(`${baseUrl}/pins/${pinId}.json`, pinObj);
+
 const deletePin = (pinId) => axios.delete(`${baseUrl}/pins/${pinId}.json`);
 
-export default { getBoardPins, deletePin, createPin };
+export default {
+  getBoardPins,
+  deletePin,
+  createPin,
+  getSinglePin,
+  editPin
+};
