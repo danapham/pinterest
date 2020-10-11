@@ -29,9 +29,7 @@ const getSinglePin = (pinId) => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-// const editPin = (pinId) => {
-
-// }
+const editPin = (pinId, pinObj) => axios.patch(`${baseUrl}/pins/${pinId}.json`, pinObj);
 
 const deletePin = (pinId) => axios.delete(`${baseUrl}/pins/${pinId}.json`);
 
@@ -39,5 +37,6 @@ export default {
   getBoardPins,
   deletePin,
   createPin,
-  getSinglePin
+  getSinglePin,
+  editPin
 };
