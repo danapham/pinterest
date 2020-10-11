@@ -1,7 +1,7 @@
 import pinData from '../../helpers/data/pinData';
 
 const pinBuilder = (pinObject) => {
-  const domString = `<div class="card" style="width: 18rem;">
+  const domString = `<div class="card" id="${pinObject.pinId}" style="width: 18rem;">
   <img src="${pinObject.imageUrl}" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">${pinObject.caption}</p>
@@ -11,6 +11,7 @@ const pinBuilder = (pinObject) => {
 </div>`;
 
   $('body').on('click', 'button.delete-pin', (e) => {
+    $(`.card#${e.currentTarget.id}`).remove();
     pinData.deletePin(e.currentTarget.id);
   });
 
