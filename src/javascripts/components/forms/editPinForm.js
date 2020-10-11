@@ -22,7 +22,7 @@ const editPinForm = (singlePin) => {
 
   boardData.getAllBoards().then((response) => {
     $('#selectedBoardTitle').html('');
-    $('#selectedBoardTitle').append('<option>Select a board</option>');
+    $('#selectedBoardTitle').append('<option value="">Select a board</option>');
     response.forEach((board) => {
       $('#selectedBoardTitle').append(`<option value="${board.boardId}" ${board.boardId === singlePin.boardId ? 'selected' : ''}>${board.title}</option>`);
     });
@@ -37,20 +37,22 @@ const editPinForm = (singlePin) => {
       boardId: $('#selectedBoardTitle').val() || false
     };
 
+    console.warn(pinFormData);
+
     if (Object.values(pinFormData).includes(false)) {
       $('#pinErrorMsg').html('<div class="alert alert-danger" role="alert">Please fill out all fields.</div>');
     } else {
       $('#pinErrorMsg').html('');
+
+      pinData.editPin(singlePin.pinId, pinFormData)
+        .then(() => {
+          $('#pinSuccessMsg').html('<div class="alert alert-success" role="alert">Your pin was added!</div>');
+        }).catch((error) => console.warn(error));
+
+      setTimeout(() => {
+        $('#pinSuccessMsg').html('');
+      }, 2000);
     }
-
-    pinData.editPin(singlePin.pinId, pinFormData)
-      .then(() => {
-        $('#pinSuccessMsg').html('<div class="alert alert-success" role="alert">Your pin was added!</div>');
-      }).catch((error) => console.warn(error));
-
-    setTimeout(() => {
-      $('#pinSuccessMsg').html('');
-    }, 2000);
   });
 };
 
