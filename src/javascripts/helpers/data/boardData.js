@@ -1,5 +1,6 @@
 import axios from 'axios';
 import apiKeys from '../apiKeys.json';
+import pinData from './pinData';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
@@ -22,4 +23,16 @@ const createBoard = (boardData) => axios.post(`${baseUrl}/boards.json`, boardDat
     axios.patch(`${baseUrl}/boards/${response.data.name}.json`, fbKey);
   }).catch((error) => console.warn(error));
 
-export default { getAllBoards, createBoard };
+const deleteBoard = (boardId) => {
+  pinData.getBoardPins(boardId)
+    .then((response) => {
+      response.forEach((pin) => {
+        pinData.deletePin(pin.pinId);
+      });
+    })
+    .then(() => {
+      axios.delete(`${baseUrl}/boards/${boardId}.json`);
+    });
+};
+
+export default { getAllBoards, createBoard, deleteBoard };
