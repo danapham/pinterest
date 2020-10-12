@@ -1,0 +1,13 @@
+body {
+  background-color: $linen;
+}
+
+#app {
+  display: flex;
+  padding: 10%;
+}
+
+div.board-card {
+  margin: 2%;
+  text-align: center;
+}
