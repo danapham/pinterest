@@ -34,6 +34,9 @@ const viewListeners = (view) => {
   $('body').on('click', 'button.edit-pin', (e) => {
     viewHelper('editPin', e.currentTarget.id);
   });
+  $('#boardsLink').on('click', () => {
+    window.location.reload();
+  });
 };
 
 export default { viewListeners };
