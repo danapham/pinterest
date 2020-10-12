@@ -27,8 +27,7 @@ const viewListeners = () => {
   $('body').on('click', 'li.nav-item', (e) => {
     viewHelper(e.currentTarget.id);
   });
-  $('body').on('click', 'div.card-body', (e) => {
-    console.warn(e.currentTarget.id);
+  $('body').on('click', 'div.card', (e) => {
     viewHelper('displayPins', e.currentTarget.id);
   });
   $('body').on('click', 'button.edit-pin', (e) => {
