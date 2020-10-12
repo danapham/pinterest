@@ -17,10 +17,10 @@ const displayUserNav = () => {
           <a class="nav-link" href="#">Boards <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" id="addBoardLink">
-        <a class="nav-link" href="#">+Add Board</a>
+        <a class="nav-link" href="#"><i class="fas fa-plus-circle"></i>Add Board</a>
       </li>
       <li class="nav-item" id="addPinLink">
-      <a class="nav-link" href="#">+Add Pin</a>
+      <a class="nav-link" href="#"><i class="fas fa-plus-circle"></i>Add Pin</a>
     </li>
       </ul>
       <ul class="navbar-nav ml-auto">

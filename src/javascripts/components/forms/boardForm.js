@@ -6,10 +6,10 @@ const boardForm = () => {
   <form>
   <div id="errorMsg"></div>
   <div class="form-group">
-    <label for="boardTitle">Board Title</label>
+    <label for="boardTitle">Enter a board title</label>
     <input type="text" class="form-control" id="boardTitle" aria-describedby="boardTitleHelp">
   </div>
-  <button type="submit" class="btn btn-primary" id="addBoardBtn">Submit</button>
+  <button type="submit" class="btn btn-light btn-primary" id="addBoardBtn">Submit</button>
 </form>`);
 
   $('#addBoardBtn').on('click', (e) => {

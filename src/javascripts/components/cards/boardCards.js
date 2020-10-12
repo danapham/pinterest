@@ -5,7 +5,7 @@ const boardBuilder = (boardObj) => {
   <div class="card-body">
     <p class="card-text">${boardObj.title}</p>
   </div>
-  <button type="button" class="btn btn-light delete-board" id="${boardObj.boardId}">Delete</button>
+  <button type="button" class="btn btn-light delete-board" id="${boardObj.boardId}"><i class="far fa-trash-alt"></i></button>
 </div>`;
 
   $('body').on('click', '.card.board-card .btn.delete-board', (e) => {

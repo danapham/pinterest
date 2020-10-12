@@ -13,11 +13,12 @@ const pinForm = () => {
   }).catch((error) => console.warn(error));
 
   $('#pinForm').html(`
+  <h1>Add a Pin</h1>
   <div id="pinSuccessMsg"></div>
   <form>
   <div id="pinErrorMsg"></div>
   <div class="form-group">
-    <label for="imageUrl">Image Url</label>
+    <label for="imageUrl">Image Link</label>
     <input type="url" class="form-control" id="imageUrl">
   </div>
   <div class="form-group">
