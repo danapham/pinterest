@@ -1,15 +1,13 @@
-/* eslint-disable no-undef */
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const signMeIn = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
+  provider.setCustomParameters({
+    prompt: 'select_account'
+  });
   firebase.auth().signInWithPopup(provider);
 };
-
-// const setLoginStatus = (status) => {
-//   sessionStorage.setItem('loginStatus', status);
-// };
 
 const loginButton = () => {
   $('#nav').html(`

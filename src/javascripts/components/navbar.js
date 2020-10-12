@@ -2,12 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const logoutButton = () => {
-  // $('#authBtn').replaceWith(
-  //   '<button class="btn btn-outline-secondary ml-auto" id="logoutBtn" type="button">Logout</button>'
-  // );
   $('#logoutBtn').on('click', () => {
     firebase.auth().signOut();
-    // setLoginStatus(false);
   });
 };
 
@@ -19,9 +15,6 @@ const displayUserNav = () => {
       <ul class="navbar-nav user-view">
         <li class="nav-item active" id="boardsLink">
           <a class="nav-link" href="#">Boards <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item" id="pinsLink">
-          <a class="nav-link" href="#">Pins</a>
         </li>
         <li class="nav-item" id="addBoardLink">
         <a class="nav-link" href="#">+Add Board</a>
