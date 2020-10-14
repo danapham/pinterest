@@ -13,20 +13,23 @@ const pinForm = () => {
   }).catch((error) => console.warn(error));
 
   $('#pinForm').html(`
+  <form id="pinFormStyling">
+  <h1 class="form-titles">Add a Pin</h1>
   <div id="pinSuccessMsg"></div>
-  <form>
   <div id="pinErrorMsg"></div>
   <div class="form-group">
-    <label for="imageUrl">Image Url</label>
+    <label for="imageUrl" class="pinLabel">Image Link</label>
     <input type="url" class="form-control" id="imageUrl">
   </div>
   <div class="form-group">
-    <label for="caption">Caption</label>
+    <label for="caption" class="pinLabel">Caption</label>
     <input type="text" class="form-control" id="caption">
   </div>
   <select class="custom-select" id="selectedBoardTitle">
   </select>
-  <button type="submit" id="submitPin" class="btn btn-primary">Submit</button>
+  <div class="submit-btn pin-submit-btn">
+  <button type="submit" id="submitPin" class="btn btn-light btn-primary">Submit</button>
+  </div>
 </form>
 `);
 

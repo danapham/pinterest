@@ -1,7 +1,7 @@
 import boardForm from '../forms/boardForm';
 
 const addBoard = () => {
-  $('#app').html('<div id="boardForm"></div>');
+  $('#app').html('<div id="boardForm" class="forms"></div>');
   boardForm.boardForm();
 };
 

@@ -1,0 +1,32 @@
+.forms {
+  text-align: left;
+  width: 40%;
+  font-family: $secondary-font;
+  font-size: 1.2rem;
+  background-color: $tan;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.form-titles {
+  font-family: $primary-font;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.submit-btn {
+  font-family: $primary-font;
+  text-align: center;
+  margin-top: 25%;
+}
+
+.btn {
+  font-size: 1.5rem;
+}
