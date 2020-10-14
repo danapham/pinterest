@@ -1,4 +1,24 @@
-#boardForm {
+.forms {
   text-align: center;
-  width:  30%;
+  width: 60%;
+  font-family: $secondary-font;
+  font-size: 1.5rem;
+  background-color: $tan;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin: 5% 5% 5% 5%;
+}
+
+.form-titles {
+  font-family: $primary-font;
+  font-size: 5rem;
+}
+
+.btn {
+  font-family: $primary-font;
+  font-size: 1.5rem;
 }
