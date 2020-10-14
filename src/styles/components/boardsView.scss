@@ -12,4 +12,10 @@ div.board-card {
   margin: 2%;
   text-align: center;
   font-family: $secondary-font;
+  border-radius: 1.5rem;
+}
+
+.card-body .delete-board {
+  width: 100%;
+  font-size: 1.2rem;
 }
