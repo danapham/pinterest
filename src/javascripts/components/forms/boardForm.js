@@ -7,10 +7,12 @@ const boardForm = () => {
             <div id="successMsg"></div>
             <div id="errorMsg"></div>
             <div class="form-group">
-              <label for="boardTitle">Enter a board title</label>
+              <label for="boardTitle">Title</label>
               <input type="text" class="form-control" id="boardTitle" aria-describedby="boardTitleHelp">
+              <div class="submit-btn">
+                <button type="submit" class="btn btn-light btn-primary" id="addBoardBtn">Submit</button>
+              </div>
             </div>
-            <button type="submit" class="btn btn-light btn-primary" id="addBoardBtn">Submit</button>
           </form>`);
 
   $('#addBoardBtn').on('click', (e) => {
