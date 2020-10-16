@@ -8,11 +8,20 @@ body {
   justify-content: center;
 }
 
+h3 {
+  font-family: $primary-font;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
 div.board-card {
+  background-image: url('https://www.texturex.com/wp-content/uploads/2018/03/leather-texture-tied-rope-bound-journal-material-wallpaper-5.jpg');
+  background-size: cover;
+  padding: 8% 1% 5% 1%;
   margin: 2%;
   text-align: center;
-  font-family: $secondary-font;
-  border-radius: 1.5rem;
+  color: $offwhite;
+  border-radius: .5rem;
 }
 
 .card-body .delete-board {
